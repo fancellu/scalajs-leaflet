@@ -3,3 +3,4 @@ script:
   - sbt fullOptJS 
 scala:
    - 2.11.8
+
