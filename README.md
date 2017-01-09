@@ -23,7 +23,7 @@ download dependencies and prepare the relevant javascript files. It then kicks o
 If you open
 [localhost:12345/example/target/scala-2.11/classes/quickstart-dev.html](http://localhost:12345/example/target/scala-2.11/classes/quickstart-dev.html) in your browser, it will show you a sample app.
 Do open the Console to see debug messages. There are is another code example at
-localhost:12345/example/target/scala-2.11/classes/leaflet2-dev.html](http://localhost:12345/example/target/scala-2.11/classes/leaflet2-dev.html)
+[localhost:12345/example/target/scala-2.11/classes/leaflet2-dev.html](http://localhost:12345/example/target/scala-2.11/classes/leaflet2-dev.html)
 
 
 ## Live Demo
