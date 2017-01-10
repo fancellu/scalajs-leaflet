@@ -11,9 +11,9 @@ import scala.scalajs.js.annotation.JSExport
 object Leaflet2 extends {
 
   @JSExport
-  def main(el: String): LMap = {
+  def main(el: String, southwarkpark: js.Object): LMap = {
 
-    println(new java.util.Date)
+    println(JSON.stringify(southwarkpark))
 
     val mapOptions=LMapOptions.zoom(13).center((51.505, -0.09))
 
@@ -94,8 +94,12 @@ object Leaflet2 extends {
     L.marker((51.52, -0.08), MarkerOptions.icon(greenIcon)).bindPopup("I am a green leaf.").addTo(lmap)
     L.marker((51.52, -0.089), MarkerOptions.icon(redIcon)).bindPopup("I am a red leaf.").addTo(lmap)
 
+    val geojson=L.geoJSON(southwarkpark)
+
     val basemaps = literal("base"->tileLayer)
-    val overlays = literal("images"->layerGroup)
+    val overlays = literal("images"->layerGroup, "geojson"->geojson)
+
+    geojson.addTo(lmap)
 
     L.control.layers(basemaps, overLays = overlays, ControlLayerOptions.collapsed(false).hideSingleBase(true)).addTo(lmap)
 
