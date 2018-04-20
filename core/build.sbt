@@ -2,7 +2,7 @@ name := "scalajs-leaflet"
 
 description := "Scala.js+Leaflet examples"
 
-version := "0.1"
+version := "0.2"
 
 libraryDependencies ++= Seq(
   "org.scala-js" %%% "scalajs-dom" % "0.9.1",
