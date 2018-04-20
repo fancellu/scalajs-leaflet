@@ -1,7 +1,5 @@
-lazy val example = project.enablePlugins(ScalaJSPlugin).dependsOn(core)
+lazy val core = project.enablePlugins(ScalaJSPlugin).settings(scalacOptions += "-feature")
+lazy val example = project.enablePlugins(ScalaJSPlugin, WorkbenchPlugin).dependsOn(core)
+lazy val scalajs_leaflet = (project in file(".")).aggregate(core, example)
 
-lazy val core = project.enablePlugins(ScalaJSPlugin)
-
-lazy val scalajs_leaflet = (project in file(".")).enablePlugins(ScalaJSPlugin).dependsOn(core, example).aggregate(core, example)
-
-scalaVersion in ThisBuild := "2.11.8"
+crossScalaVersions := Seq("2.11.11", "2.12.5")

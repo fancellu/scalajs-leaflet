@@ -5,9 +5,9 @@ import com.felstar.scalajs.leaflet._
 import scala.scalajs.js
 import scala.scalajs.js.Dynamic.literal
 import scala.scalajs.js.JSON
-import scala.scalajs.js.annotation.JSExport
+import scala.scalajs.js.annotation.{JSExport, JSExportTopLevel}
 
-@JSExport
+@JSExportTopLevel("com.felstar.leaflet.Leaflet2")
 object Leaflet2 extends {
 
   @JSExport

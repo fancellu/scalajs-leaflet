@@ -4,8 +4,9 @@ import org.querki.jsext._
 import org.scalajs.dom.raw.HTMLElement
 
 import scala.scalajs.js
-import scala.scalajs.js.Dynamic.literal
 import scala.scalajs.js.|
+import scala.scalajs.js.Dynamic.literal
+import scala.scalajs.js.annotation.JSGlobal
 
 trait SCOptionSetter[T <: js.Object, B <: SCOptionBuilder[T, _]] extends JSOptionSetter[T,B]{
   protected def jsOpt(opt: Any)(implicit name: sourcecode.Name): B
@@ -18,6 +19,7 @@ abstract class SCOptionBuilder[T <: js.Object, B <: SCOptionBuilder[T, _]](copy:
 }
 
 @js.native
+@JSGlobal
 object L extends js.Object {
   def map(id: String, options: LMapOptions= ???): LMap = js.native
   def latLng(lat: Double, lng: Double): LatLng = js.native
